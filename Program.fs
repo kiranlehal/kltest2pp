@@ -9,13 +9,15 @@ type Genre =
 
 type Dir = {
     Name: string
-    Mov: int  
+    Mov: int 
 }
 
 type Mov = {
     Name: string
-    RunLength: int
+    RunLgth: int
     Genre: Genre
     Dir: Dir
     IMDB: float
 }
+
+
