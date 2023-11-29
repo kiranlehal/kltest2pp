@@ -31,5 +31,16 @@ let movies = [
     { Name = "Nightmare Alley"; RunLgth = 150; Genre = Thriller; Dir = { Name = "Guillermo Del Toro"; Mov = 22 }; IMDB = 7.1 }
 ]
 
+let oscrmov = [
+    {Name = "CODA"}
+    {Name = "Belfast"}
+    {Name = "Don't Look Up"}
+    {Name = "Drive My Car"}
+    {Name = "Dune"}
+    {Name = "King Richard"}
+    {Name = "Licorice Pizza"}
+    {Name = "Nightmare Alley"}
+]
+
 
 
