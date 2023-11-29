@@ -20,7 +20,7 @@ type Mov = {
     IMDB: float
 }
 
-let movies = [
+let mov = [
     { Name = "CODA"; RunLgth = 111; Genre = Drama; Dir = { Name = "Sian Heder"; Mov = 9 }; IMDB = 8.1 }
     { Name = "Belfast"; RunLgth = 98; Genre = Comedy; Dir = { Name = "Kenneth Branagh"; Mov = 23 }; IMDB = 7.3 }
     { Name = "Don't Look Up"; RunLgth = 138; Genre = Comedy; Dir = { Name = "Adam McKay"; Mov = 27 }; IMDB = 7.2 }
@@ -31,16 +31,14 @@ let movies = [
     { Name = "Nightmare Alley"; RunLgth = 150; Genre = Thriller; Dir = { Name = "Guillermo Del Toro"; Mov = 22 }; IMDB = 7.1 }
 ]
 
-let oscrmov = [
-    {Name = "CODA"}
-    {Name = "Belfast"}
-    {Name = "Don't Look Up"}
-    {Name = "Drive My Car"}
-    {Name = "Dune"}
-    {Name = "King Richard"}
-    {Name = "Licorice Pizza"}
-    {Name = "Nightmare Alley"}
-]
+let oscarWinrs = mov |> List.filter (fun mov -> mov.IMDB > 7.4)
+printfn "Probable Oscar Winrs: %A" oscarWinrs
 
 
+let convertRunLgth (minutes: int) =
+    let hours = minutes / 60
+    let remainingMinutes = minutes % 60
+    sprintf "%dh %02dmin" hours remainingMinutes
 
+let runLgthsInHours = mov |> List.map (fun mov -> convertRunLgth mov.RunLgth)
+printfn "Mov Run Lgths in Hours: %A" runLgthsInHours
